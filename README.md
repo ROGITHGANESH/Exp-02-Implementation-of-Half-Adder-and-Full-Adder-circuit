@@ -1,4 +1,4 @@
-# Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit
+# Exp-03-Implementation-of-Half-Adder-and-Full-Adder-circuit
 
 # Implementation-of-Half-Adder-and-Full-Adder-circuit
 ### AIM:
@@ -36,19 +36,47 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+# half_adder
+```
+module half_adder(a,b,s,c);
+output s,c;
+input a,b;
+assign s=a^b;
+assign c=a&b;
+endmodule
+```
+
+# full_adder
+```
+module full_adder(A,B,cin,S,cout);
+input A,B,cin;
+output S,cout;
+assign S=A^B^cin;
+assign cout=(A&B)| (B&cin)| (A&cin);
+endmodule
+```
 Logic symbol & Truthtable
 RTL realization
 
 ### Output:
-### RTL
-### TIMING DIAGRAM
+half_adder
+![image](https://github.com/ROGITHGANESH/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152588322/ca86485d-b49b-49a7-8269-ba6bf1a9fc2b)
+full_adder
+![image](https://github.com/ROGITHGANESH/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152588322/d69639a9-47b8-47a1-9a97-98a1d32ff176)
 
+### RTL
+# half_adder
+![image](https://github.com/ROGITHGANESH/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152588322/b2c606c5-288e-4fa7-8b7f-50ad02501255)
+# full _adder
+![image](https://github.com/ROGITHGANESH/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152588322/b86bd8e8-9ee5-4a1a-a7c6-4605db0a9a58)
 
 ### TRUTH TABLE 
+# half_adder
+![image](https://github.com/ROGITHGANESH/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152588322/208169a1-84c7-473b-948d-555fc9710de6)
+
+# full_adder
+![image](https://github.com/ROGITHGANESH/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/152588322/97c929fe-c008-4b57-bc62-da3b49827249)
+
 
 ### Result:
+The program Half adder and full adder executed succesfully.
